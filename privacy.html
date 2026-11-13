@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CipherON privacy policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>CIPHERON</h1>
+  <p>Privacy policy &middot; effective 12 November 2026</p>
+</header>
+<main>
+  <p>CipherON is a password manager for Android. This policy explains what happens to your information when you use it.
+  The short version: <strong>CipherON does not collect your data. Everything stays on your phone, encrypted, unless you
+  yourself choose to back it up to your own Google Drive or your own WebDAV server.</strong></p>
+
+  <h2>What the developer collects</h2>
+  <p>Nothing. The developer operates no servers for CipherON, has no user accounts, and receives no passwords, vault
+  contents, usage statistics, crash reports, identifiers or location data. The app contains no advertising, analytics
+  or tracking libraries.</p>
+
+  <h2>Data stored on your phone</h2>
+  <ul>
+    <li>Your vault (entries, notes, attachments, history) is stored in a database encrypted with AES-256 (SQLCipher).
+    The key is derived from your master password with Argon2id. The master password itself is never stored or sent anywhere.</li>
+    <li>If you enable fingerprint unlock, a key protected by the Android Keystore unlocks the vault after your fingerprint
+    is accepted. CipherON never receives your fingerprint data; Android handles it.</li>
+    <li>App settings and sign-in tokens for optional services are stored in the app's private storage; secrets among them
+    are encrypted with a Keystore key.</li>
+    <li>Passwords you copy are placed on the clipboard marked as sensitive and cleared automatically after the delay you choose.</li>
+    <li>Android's backup and device-transfer features are switched off for the app, so the vault is not copied to Google
+    through them.</li>
+  </ul>
+
+  <h2 id="google">Google Drive backup (optional)</h2>
+  <p>If you tap <em>Sign in with Google</em> in CipherON, you sign in on Google's own page in your browser. CipherON never
+  sees your Google password. The app requests one permission:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/drive.file</code>: view and manage only the files and folders that CipherON
+    itself creates in your Google Drive. CipherON cannot see any other file in your Drive.</li>
+  </ul>
+  <p>What the app does with it: it creates a folder named <em>cipheron</em> in your Drive, uploads your backup files there
+  (they are your vault in already-encrypted form, readable only with your master password), lists them so you can restore
+  one, downloads the one you pick, and deletes old backups according to your "backups to keep" setting. It also reads the
+  email address of the signed-in account so it can show you which account is connected.</p>
+  <p>This information goes only between your phone and Google. It is not sent to the developer or to anyone else, and it
+  is not used for advertising or any purpose other than providing the backup and restore feature you asked for.
+  To disconnect, press <em>Sign out</em> in CipherON (this removes the sign-in from your phone) and, to revoke the access
+  at Google as well, remove CipherON at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. You can delete the
+  <em>cipheron</em> folder from your Drive at any time.</p>
+  <div class="box">
+    CipherON's use and transfer to any other app of information received from Google APIs will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </div>
+
+  <h2>WebDAV sync (optional)</h2>
+  <p>If you enter a WebDAV server address and login, CipherON uploads the encrypted vault file to that server, which you
+  choose and control. The server's operator can see an encrypted file but not its contents. The login password is stored
+  encrypted on your phone.</p>
+
+  <h2>Files you export or share</h2>
+  <p>If you export to plain CSV, Excel or PDF, or share a backup, the resulting file is written where you choose and
+  leaves the app's protection. Plain exports are not encrypted unless you select the encrypted CSV option.</p>
+
+  <h2>Permissions the app uses</h2>
+  <ul>
+    <li><strong>Internet</strong>: only for the optional Google Drive backup and WebDAV sync you set up.</li>
+    <li><strong>Biometric</strong>: only to offer fingerprint unlock if you turn it on.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>CipherON is not directed at children and does not knowingly collect information from anyone.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the new version will be published at this address with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: contact the developer through the GitHub profile
+  <a href="https://github.com/esw4">github.com/esw4</a>.</p>
+
+  <footer>
+    <p><a href="index.html">Back to the CipherON homepage</a></p>
+  </footer>
+</main>
+</body>
+</html>

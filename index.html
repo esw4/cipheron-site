@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CipherON - offline encrypted password manager for Android</title>
+<meta name="description" content="CipherON is an offline-first password manager for Android. Your vault is encrypted on your phone; nothing is sent to the developer.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>CIPHERON</h1>
+  <p>Secure vault for Android // offline first</p>
+</header>
+<main>
+  <p>CipherON is a password manager for Android that keeps your logins, notes, one-time-code secrets and files in a
+  vault that is encrypted on your phone. It works fully offline. There are no accounts to create, no ads and no tracking.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Encrypted vault (SQLCipher, AES-256) protected by a master password (Argon2id key derivation) and optional fingerprint unlock.</li>
+    <li>Entries with several categories, extra usernames, passwords, PINs and websites, attachments, password history and an archive.</li>
+    <li>Password, passphrase and PIN generator; one-time codes (TOTP); security statistics.</li>
+    <li>Import from many password managers; export to CSV, Excel and PDF; encrypted backup files.</li>
+    <li>Optional backup to your own Google Drive (a folder named <em>cipheron</em>) and optional sync to your own WebDAV server.</li>
+    <li>Auto-lock, screenshot protection, clipboard auto-clear and an optional self-destruct after wrong passwords.</li>
+  </ul>
+
+  <div class="box">
+    <strong>Your data stays yours.</strong> The developer runs no servers for CipherON and receives none of your data.
+    Read the <a href="privacy.html">privacy policy</a>.
+  </div>
+
+  <h2>Google Drive backup</h2>
+  <p>If you choose to connect Google Drive, CipherON asks only for permission to see and manage the files and folder it
+  creates itself (the <code>drive.file</code> permission). It uploads the already-encrypted backup file to a folder named
+  <em>cipheron</em> in your Drive. See the <a href="privacy.html#google">privacy policy</a> for details.</p>
+
+  <footer>
+    <p><a href="privacy.html">Privacy policy</a> &middot; <a href="https://github.com/esw4">Developer on GitHub</a></p>
+  </footer>
+</main>
+</body>
+</html>
