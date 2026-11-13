@@ -4,41 +4,261 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CipherON - offline encrypted password manager for Android</title>
-<meta name="description" content="CipherON is an offline-first password manager for Android. Your vault is encrypted on your phone; nothing is sent to the developer.">
+<meta name="description" content="CipherON is an offline-first password manager for Android. AES-256 encrypted vault, Argon2id, fingerprint unlock, one-time codes, optional Google Drive backup. No accounts, no ads, no tracking.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="logo.png">
+<meta property="og:title" content="CipherON - offline encrypted password manager">
+<meta property="og:description" content="Your vault is encrypted on your phone. No accounts, no ads, no tracking.">
+<meta property="og:image" content="https://esw4.github.io/cipheron-site/logo.png">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CipherON","operatingSystem":"Android 8.0+","applicationCategory":"SecurityApplication","softwareVersion":"1.2.4","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Offline-first encrypted password manager for Android."}
+</script>
 </head>
 <body>
-<header>
-  <h1><img src="logo.png" alt="" width="40" height="40" style="vertical-align:middle;margin-right:10px">CipherON</h1>
-  <p>Secure vault for Android // offline first</p>
-</header>
-<main>
-  <p>CipherON is a password manager for Android that keeps your logins, notes, one-time-code secrets and files in a
-  vault that is encrypted on your phone. It works fully offline. There are no accounts to create, no ads and no tracking.</p>
+<a class="skip" href="#main">Skip to content</a>
 
-  <h2>What it does</h2>
-  <ul>
-    <li>Encrypted vault (SQLCipher, AES-256) protected by a master password (Argon2id key derivation) and optional fingerprint unlock.</li>
-    <li>Entries with several categories, extra usernames, passwords, PINs and websites, attachments, password history and an archive.</li>
-    <li>Password, passphrase and PIN generator; one-time codes (TOTP); security statistics.</li>
-    <li>Import from many password managers; export to CSV, Excel and PDF; encrypted backup files.</li>
-    <li>Optional backup to your own Google Drive (a folder named <em>CipherON</em>) and optional sync to your own WebDAV server.</li>
-    <li>Auto-lock, screenshot protection, clipboard auto-clear and an optional self-destruct after wrong passwords.</li>
-  </ul>
-
-  <div class="box">
-    <strong>Your data stays yours.</strong> The developer runs no servers for CipherON and receives none of your data.
-    Read the <a href="privacy.html">privacy policy</a>.
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.png" alt="" width="32" height="32">CipherON</a>
+    <ul>
+      <li><a href="#screens">Screens</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#backup">Backup</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+    </ul>
   </div>
+</nav>
 
-  <h2>Google Drive backup</h2>
-  <p>If you choose to connect Google Drive, CipherON asks only for permission to see and manage the files and folder it
-  creates itself (the <code>drive.file</code> permission). It uploads the already-encrypted backup file to a folder named
-  <em>CipherON</em> in your Drive. See the <a href="privacy.html#google">privacy policy</a> for details.</p>
+<main id="main">
 
-  <footer>
-    <p><a href="privacy.html">Privacy policy</a> &middot; <a href="https://github.com/esw4">Developer on GitHub</a></p>
-  </footer>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Your passwords.<br><em>Encrypted. Offline.</em><br>Yours.</h1>
+      <p class="lead">CipherON is a password manager for Android that keeps logins, notes, one-time codes and files in a vault that is encrypted on your phone. No accounts to create, no ads, no tracking, and the developer never sees your data.</p>
+      <div class="row">
+        <a class="btn" href="#screens">See the app</a>
+        <a class="btn ghost" href="privacy.html">Privacy policy</a>
+      </div>
+      <div class="badges" aria-label="Highlights">
+        <span class="badge">AES-256</span><span class="badge">Argon2id</span><span class="badge">Fingerprint</span>
+        <span class="badge">Works offline</span><span class="badge">Free</span>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="floor"></div>
+      <div class="stack" id="stack">
+        <div class="phone p1"><span class="cam"></span><img src="img/otp.webp" alt="" width="540" height="1200"></div>
+        <div class="phone p2"><span class="cam"></span><img src="img/vault.webp" alt="" width="540" height="1200"></div>
+        <div class="phone p3"><span class="cam"></span><img src="img/terminal-unlock.webp" alt="" width="540" height="1200"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACTS ================= -->
+<section class="facts" aria-label="Key facts">
+  <div class="wrap">
+    <div class="fact"><b data-n="256">0</b><span>bit AES vault</span></div>
+    <div class="fact"><b data-n="64" data-suf=" MB">0</b><span>Argon2id memory</span></div>
+    <div class="fact"><b data-n="0">0</b><span>servers of ours</span></div>
+    <div class="fact"><b data-n="15">0</b><span>import formats</span></div>
+    <div class="fact"><b data-n="9">0</b><span>screen designs</span></div>
+  </div>
+</section>
+
+<!-- ================= SCREENS ================= -->
+<section id="screens">
+  <div class="wrap">
+    <h2 class="center rv"><span class="tag">The app</span>Every screen, in 3D</h2>
+    <p class="lead center rv">Drag, swipe or use the arrows. These are real screenshots from CipherON, shown with sample data.</p>
+
+    <div class="carousel" id="carousel" role="group" aria-roledescription="carousel" aria-label="App screenshots">
+      <div class="ring" id="ring">
+        <div class="phone" data-t="Vault" data-d="Search, sort and filter your logins. Favourites, categories and copy buttons sit right on the list."><span class="cam"></span><img src="img/vault.webp" alt="Vault list with sample logins" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="One-time codes" data-d="Live two-factor codes with a countdown. Tap to copy."><span class="cam"></span><img src="img/otp.webp" alt="One-time codes tab" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Entry details" data-d="Everything about a login in one view. Passwords stay masked until you choose to show them."><span class="cam"></span><img src="img/detail.webp" alt="Entry with username, password, website and one-time code" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Extra fields" data-d="Need a second username, a PIN or another website? Add as many as you like, each with its own label."><span class="cam"></span><img src="img/editor.webp" alt="Entry editor with extra username, PIN and website fields" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Generator" data-d="Strong passwords, passphrases and PINs, with a strength meter and presets."><span class="cam"></span><img src="img/generator.webp" alt="Password generator" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Statistics" data-d="Spot weak, reused and short passwords at a glance."><span class="cam"></span><img src="img/stats.webp" alt="Password statistics" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Manage" data-d="Categories, fields, archive, statistics, import/export and backup in one hub."><span class="cam"></span><img src="img/manage.webp" alt="Manage hub" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Google Drive backup" data-d="Back up your encrypted vault to a CipherON folder in your own Google Drive."><span class="cam"></span><img src="img/drive.webp" alt="Google Drive backup screen" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Sync" data-d="Optionally sync to your own WebDAV server, with conflict-safe versions."><span class="cam"></span><img src="img/sync.webp" alt="WebDAV sync screen" loading="lazy" width="540" height="1200"></div>
+        <div class="phone" data-t="Settings" data-d="Nine screen designs, auto-lock, biometrics, screenshot protection and more."><span class="cam"></span><img src="img/settings.webp" alt="Settings screen" loading="lazy" width="540" height="1200"></div>
+      </div>
+    </div>
+    <div class="cap" aria-live="polite"><h3 id="capT">Vault</h3><p id="capD"></p></div>
+    <div class="ctrls">
+      <button id="prev" aria-label="Previous screen">&larr;</button>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <button id="next" aria-label="Next screen">&rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY ================= -->
+<section id="security">
+  <div class="wrap sec">
+    <div class="layers rv" aria-hidden="true">
+      <div class="lstack" id="lstack">
+        <div class="layer" data-i="0">Encrypted backups</div>
+        <div class="layer" data-i="1">Android Keystore</div>
+        <div class="layer" data-i="2">AES-256 vault</div>
+        <div class="layer" data-i="3">Argon2id</div>
+        <div class="layer" data-i="4">Master password</div>
+      </div>
+    </div>
+    <div class="rv">
+      <h2><span class="tag">Security</span>Five layers between your passwords and everyone else</h2>
+      <p class="lead">Hover or tap a layer. Everything is encrypted before it touches storage, and nothing leaves the phone unless you send it.</p>
+      <ol id="slist">
+        <li data-i="4"><b>Master password</b><span>Never stored and never sent anywhere. Only you know it. If you forget it, nobody, including the developer, can recover the vault.</span></li>
+        <li data-i="3"><b>Argon2id key derivation</b><span>64 MB of memory, 3 passes and a random salt turn your password into the vault key, making guessing slow and costly.</span></li>
+        <li data-i="2"><b>AES-256 encrypted vault</b><span>The database is encrypted with SQLCipher. Entries, notes, history and attachments are all ciphertext at rest.</span></li>
+        <li data-i="1"><b>Android Keystore</b><span>Fingerprint unlock and saved sign-in tokens are protected by keys held in the phone's secure hardware or Keystore.</span></li>
+        <li data-i="0"><b>Encrypted backups</b><span>A backup file is the vault in encrypted form. Google Drive, WebDAV and any file location only ever see ciphertext.</span></li>
+      </ol>
+      <div class="chips">
+        <span class="chip">Auto-lock</span><span class="chip">Screenshot block</span><span class="chip">Clipboard auto-clear</span>
+        <span class="chip">Self-destruct after N wrong tries</span><span class="chip">No Android cloud backup</span><span class="chip">HTTPS-only sync</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANIMATIONS ================= -->
+<section id="terminal" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2 class="center rv"><span class="tag">Feels like a terminal</span>Unlock in green. Lock in red.</h2>
+    <p class="lead center rv">A short hacking-terminal sequence plays when the vault opens and closes. The hex you see is random decoration, never your real data. You can switch it off in Settings.</p>
+    <div class="anim">
+      <figure class="rv" data-tilt>
+        <div class="phone"><span class="cam"></span><img src="img/unlock-anim.webp" alt="Unlock animation: terminal text scrolls, then ACCESS GRANTED" loading="lazy" width="360" height="800"></div>
+        <figcaption><b>Access sequence</b>Handshake, Argon2id, open vault, verify, decrypt.</figcaption>
+      </figure>
+      <figure class="red rv" data-tilt>
+        <div class="phone"><span class="cam"></span><img src="img/lock-anim.webp" alt="Lock animation in red: terminal text scrolls, then VAULT LOCKED" loading="lazy" width="360" height="800"></div>
+        <figcaption><b>Lock sequence</b>Clear clipboard, flush, zero the key, close the vault.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features">
+  <div class="wrap">
+    <h2 class="center rv"><span class="tag">Features</span>Everything a vault should do. All free.</h2>
+    <p class="lead center rv">No premium tier and no entry limit. Every feature below is included.</p>
+    <div class="cards" id="cards">
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div><h3>Encrypted vault</h3><p>Logins, notes, files and images in one SQLCipher database. Unlimited entries.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 00-5 5v3H5v10h14V11h-2V8a5 5 0 00-5-5z"/></svg></div><h3>Fingerprint unlock</h3><p>The fingerprint prompt opens by itself on the lock screen. Falls back to your master password.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/><path d="M18 15v6M15 18h6"/></svg></div><h3>Extra fields</h3><p>Second usernames, passwords, PINs and websites on any entry, each with its own label.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>One-time codes</h3><p>Built-in TOTP generator with a live countdown, so your 2FA codes sit next to the login.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></div><h3>Generator</h3><p>Passwords, passphrases and PINs with presets and an entropy-based strength meter.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Statistics</h3><p>See weak, reused and short passwords, plus rankings by category and field.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v11H3z"/></svg></div><h3>Categories &amp; archive</h3><p>Several categories per entry, favourites, search, sorting and an archive for old logins.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg></div><h3>History &amp; files</h3><p>Old passwords are kept in the entry's history. Attach files and images up to 5 MB, stored encrypted.</p></article>
+      <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><h3>Hard to leak</h3><p>Screenshots blocked by default, clipboard marked sensitive and cleared, auto-lock and self-destruct.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BACKUP ================= -->
+<section id="backup" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap bk">
+    <div class="rv">
+      <h2><span class="tag">Backup &amp; sync</span>Your data, safe in more than one place</h2>
+      <p class="lead">Back up to your own Google Drive, keep an encrypted file anywhere, or sync to a server you control.</p>
+      <ul class="steps">
+        <li><b>Google Drive backup</b><span>Sign in with a Google account already on your phone. CipherON creates a folder named <em>CipherON</em> in your Drive and uploads the encrypted backup. It can only see files it created itself.</span></li>
+        <li><b>Backup file</b><span>Save or share an encrypted <code>.cphn</code> file, or let CipherON write one to a folder of your choice whenever the vault locks.</span></li>
+        <li><b>WebDAV sync</b><span>Sync with Nextcloud, ownCloud or any WebDAV server. Conflicts are detected, never overwritten silently, and older versions can be restored.</span></li>
+        <li><b>New phone?</b><span>Restore from a backup file or from Google Drive on the first-run screen, then enter your master password.</span></li>
+      </ul>
+    </div>
+    <div class="pair rv" data-tilt-pair>
+      <div class="phone"><span class="cam"></span><img src="img/drive.webp" alt="Google Drive backup screen" loading="lazy" width="540" height="1200"></div>
+      <div class="phone"><span class="cam"></span><img src="img/sync.webp" alt="WebDAV sync screen" loading="lazy" width="540" height="1200"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THEMES ================= -->
+<section id="themes">
+  <div class="wrap">
+    <h2 class="center rv"><span class="tag">Screen designs</span>Pick a glow. This page changes too.</h2>
+    <p class="lead center rv">CipherON looks like a monochrome LCD: two colours, square corners, scanlines. Choose one of nine designs.</p>
+    <div class="sw" id="sw" role="group" aria-label="Colour design" style="justify-content:center">
+      <button data-a="#ff8a00" data-o="#0a0a0a" aria-pressed="true"><i style="background:#ff8a00"></i>Orange</button>
+      <button data-a="#ffb000" data-o="#1a1000"><i style="background:#ffb000"></i>Amber</button>
+      <button data-a="#9cd64b" data-o="#0b1a00"><i style="background:#9cd64b"></i>Green</button>
+      <button data-a="#2ed9e6" data-o="#00181a"><i style="background:#2ed9e6"></i>Cyan</button>
+      <button data-a="#e3ecf6" data-o="#0a1a2a"><i style="background:#e3ecf6"></i>Ice</button>
+      <button data-a="#ff4d3d" data-o="#1a0000"><i style="background:#ff4d3d"></i>Red</button>
+      <button data-a="#ff8a00" data-o="#0a0a0a"><i style="background:#0a0a0a;border-color:#ff8a00"></i>Night</button>
+      <button data-a="#3dff6a" data-o="#050a05"><i style="background:#050a05;border-color:#3dff6a"></i>Phosphor</button>
+      <button data-a="#00ff41" data-o="#000000"><i style="background:#000;border-color:#00ff41"></i>Terminal</button>
+    </div>
+    <div class="fan" data-tilt-pair>
+      <figure class="rv"><div class="phone"><span class="cam"></span><img src="img/pal-orange.webp" alt="Orange design" loading="lazy" width="540" height="1200"></div><figcaption>Orange</figcaption></figure>
+      <figure class="rv"><div class="phone"><span class="cam"></span><img src="img/pal-amber.webp" alt="Amber design" loading="lazy" width="540" height="1200"></div><figcaption>Amber</figcaption></figure>
+      <figure class="rv"><div class="phone"><span class="cam"></span><img src="img/pal-green.webp" alt="Green design" loading="lazy" width="540" height="1200"></div><figcaption>Green</figcaption></figure>
+      <figure class="rv"><div class="phone"><span class="cam"></span><img src="img/pal-cyan.webp" alt="Cyan design" loading="lazy" width="540" height="1200"></div><figcaption>Cyan</figcaption></figure>
+      <figure class="rv"><div class="phone"><span class="cam"></span><img src="img/terminal-settings.webp" alt="Terminal design: black with green text" loading="lazy" width="540" height="1200"></div><figcaption>Terminal</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMPORT / EXPORT ================= -->
+<section id="data" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2 class="center rv"><span class="tag">Moving in and out</span>Bring your passwords. Take them with you.</h2>
+    <div class="cols rv">
+      <div><h3>Import from</h3><ul><li>Bitwarden (JSON, CSV)</li><li>1Password, LastPass, Dashlane</li><li>Enpass, Keeper, NordPass</li><li>Proton Pass, RoboForm</li><li>Google / Chrome passwords</li><li>KeePass (XML export)</li><li>Any generic CSV or Excel file</li></ul></div>
+      <div><h3>Review before it lands</h3><ul><li>See what is new, identical or in conflict</li><li>Keep mine, use imported, or keep both</li><li>Replaced passwords stay in history</li><li>Optionally restore categories and one-time secrets</li></ul></div>
+      <div><h3>Export to</h3><ul><li>CSV, with your choice of delimiter</li><li>Encrypted CSV (AES-128, 192 or 256)</li><li>Excel (XLSX)</li><li>PDF</li><li>Encrypted backup file</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap" style="max-width:860px">
+    <h2 class="center rv"><span class="tag">Questions</span>Good to know</h2>
+    <div class="rv">
+      <details><summary>Is CipherON really free?</summary><p>Yes. There is no premium tier, no entry limit and no advertising. Every feature on this page is included.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. You create a master password on your phone and that is all. The optional Google Drive backup uses your own Google account, only if you choose to connect it.</p></details>
+      <details><summary>Where is my data stored?</summary><p>In an encrypted database inside the app on your phone. The developer runs no servers for CipherON and receives no data. Backups go only where you send them.</p></details>
+      <details><summary>What if I forget my master password?</summary><p>It cannot be recovered. The password is never stored, and the vault key is derived from it. Keep it safe, and keep an encrypted backup.</p></details>
+      <details><summary>What can CipherON see in my Google Drive?</summary><p>Only the folder and backup files it creates itself (the <code>drive.file</code> permission). It cannot read the rest of your Drive. You can remove access at any time at myaccount.google.com/permissions.</p></details>
+      <details><summary>Which phones does it run on?</summary><p>Android 8.0 or newer.</p></details>
+      <details><summary>How do I get the app?</summary><p>CipherON is currently shared as a direct install file. Contact the developer through the GitHub profile in the footer.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="rv">Keep your passwords where you can see them.</h2>
+    <p class="lead center rv">On your phone, encrypted, and nowhere else unless you say so.</p>
+    <p class="rv"><a class="btn" href="privacy.html">Read the privacy policy</a></p>
+  </div>
+</section>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 CipherON &middot; version 1.2.4</span>
+    <span><a href="privacy.html">Privacy policy</a> &middot; <a href="https://github.com/esw4">Developer on GitHub</a></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
