@@ -5,7 +5,8 @@
   --mono: ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+section{overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--mono);overflow-x:hidden}
 img{max-width:100%}
 a{color:var(--accent)}
